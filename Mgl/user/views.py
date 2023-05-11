@@ -10,3 +10,6 @@ class UserView(TemplateView):
 # ProfileUpdate
 # ProfileDelete
 
+# ConfigView
+# ConfigUpdate
+
