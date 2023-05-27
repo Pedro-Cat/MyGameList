@@ -1,8 +1,6 @@
-from django.views.generic import TemplateView
 
 # Create your views here.
-class FeedView(TemplateView):
-    template_name = 'feed.html'
+
 
 # Views:
 # FeedView - Lista de posts
