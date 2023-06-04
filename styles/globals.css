@@ -23,7 +23,7 @@ a {
   padding-left: 40px;
   margin-bottom: 5px;
 }
-.gameSlider {
+.gameSlider div{
   padding-bottom: 10px;
 }
 
@@ -52,6 +52,7 @@ a {
   height: 100%;
   width: 30vh;
   margin-left: 17vh;
+  margin-top: 10px;
 }
 
 .addBtn{
