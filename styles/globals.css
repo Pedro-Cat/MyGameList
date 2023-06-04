@@ -23,6 +23,9 @@ a {
   padding-left: 40px;
   margin-bottom: 5px;
 }
+.gameSlider {
+  padding-bottom: 10px;
+}
 
 @media (prefers-color-scheme: dark) {
   body {
