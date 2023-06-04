@@ -3,7 +3,7 @@ import React from 'react'
 import GameCard from '../../components/GameCard'
 
 function GamePage(){
-   /* Isso é so pra, dependendo do valor dentro do butão, mudar a cor dele*/
+   /* Isso é so pra, dependendo do valor dentro do botão, mudar a cor dele*/
     var buttonValue = 88;
     function getButtonColorClass(value) {
         if (value > 75) {
@@ -19,7 +19,7 @@ function GamePage(){
         <div className='gamePage'>
             <div className='leftContainer'>
                 <GameCard/>
-                {/* esse butão deve adicionar o jogo a sua lista */}
+                {/* esse botão deve adicionar o jogo a sua lista */}
                 <button className='addBtn'>
                     Add Game
                 </button>
