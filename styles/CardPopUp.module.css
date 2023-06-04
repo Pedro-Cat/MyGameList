@@ -1,0 +1,52 @@
+.card{
+    background-color: white;
+    border-radius: 6px;
+    width: 160px;
+    height: 225px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.cardButton {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+} 
+
+.SearchBar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+  
+.Input {
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 8px;
+}
+  
+.Button {
+    background-color: #007bff;
+    position: absolute;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    right: 110px;
+    top: 86px;
+    cursor: pointer;
+
+}

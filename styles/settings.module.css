@@ -1,0 +1,191 @@
+.back{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 50px;
+}
+
+.configuracao{
+    
+    position: absolute;
+    width: 405px;
+    height: 40px;
+    left: 97px;
+    top: 3px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 30px;
+    color: #FFFFFF;
+    
+}
+
+.settingsUsername{
+    position: absolute;
+    left: 100px;
+    top: 155px;
+}
+
+.usernameinputField {
+    width: 500px; 
+}
+
+.settingsDescription{
+    position: absolute;
+    left: 100px;
+    top: 220px;
+}
+
+.descriptioninputField{
+    width: 500px;
+    height: 75px;
+}
+
+.settingsIcon{
+    position: absolute;
+    left: 100px;
+    top: 355px;
+}
+
+.settingsProfileBackground{
+    position: absolute;
+    left: 100px;
+    top: 455px;
+}
+
+.save{
+    position: absolute;
+    left: 100px;
+    top: 555px;
+    background-color: #639bc0;
+    color: #FFFFFF;    
+}
+
+.profile{
+    display: flex;
+    position: absolute;
+    left: 97px;
+    top: 65px;
+    overflow-x: hidden;
+
+}
+
+.security{
+    display: flex;
+    position: absolute;
+    left: 200px;
+    top:65px;
+    overflow-x: hidden;
+
+}
+
+.changetop5{
+    display: flex;
+    position: absolute;
+    top: 210px;
+    right: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    flex-direction: row;
+}
+
+.title2{
+    display: flex;
+    position: absolute;
+    top: 130px;
+    right: 450px;
+}
+
+.change{
+    position: absolute;
+    right: 100px;
+    top: 470px;
+    background-color: #639bc0;
+    color: #FFFFFF; 
+}
+
+.change2{
+    display: flex;
+    position: absolute;
+    top: 245px;
+    left: 100px;
+    background-color: #639bc0;
+    color: #FFFFFF;
+}
+
+.change3{
+    display: flex;
+    position: absolute;
+    top: 375px;
+    left: 100px;
+    background-color: #639bc0;
+    color: #FFFFFF;
+}
+
+.profile{
+    display: flex;
+    position: absolute;
+    left: 97px;
+    top: 65px;
+    overflow-x: hidden;
+
+}
+
+.security{
+    display: flex;
+    position: absolute;
+    left: 200px;
+    top:65px;
+    overflow-x: hidden;
+
+}
+
+.email{
+    display: flex;
+    position: absolute;
+    left: 100px;
+    top: 175px;
+}
+
+.password{
+    display: flex;
+    position: absolute;
+    left: 100px;
+    top: 305px;
+}
+
+.emailinputField{
+    top:25px;
+    position: absolute;
+    width: 400px; 
+}
+
+.passwordinputField{
+    top:25px;
+    position: absolute;
+    width: 400px; 
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    top: 20px;
+    left: 19px;
+    font-size: 140%;
+}
+  
+.navbar li {
+    margin: 0 10px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.line{
+    position: absolute;
+    width: 99%;
+    left: 5px;
+    top: 110px;
+    height: 1px;
+    background-color: #FFFFFF;
+    margin: 10px 0;
+}

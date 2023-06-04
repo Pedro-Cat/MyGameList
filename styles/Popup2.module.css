@@ -1,0 +1,51 @@
+.PopUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.PopupInner {
+    text-align: center;
+    display: flex;
+    min-height: 15vh;
+    position: relative;
+    align-items: center;
+    justify-content: top;
+    padding: 32px;
+    width: 545px;
+    max-width: 650px;
+    background-color: #071c2b;
+    border-radius: 15px;
+}
+
+.PopupInner label {
+    align-items: left;
+    padding: 0.25rem 0;
+}
+
+.PopupInner input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    width: 400px;
+}
+  
+.CloseBtn {
+    color: #d8d5d5;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+}
+
+.CloseBtn:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+}

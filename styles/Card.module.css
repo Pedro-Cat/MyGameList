@@ -1,0 +1,12 @@
+.card {
+    background-color: white;
+    border-radius: 6px;
+    width: 160px;
+    height: 225px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+  }

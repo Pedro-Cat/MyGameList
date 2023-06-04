@@ -15,7 +15,7 @@ const Header = (props) => {
 
     const toggleForm = (formName) => {
         setCurrentForm(formName);
-    }
+    };
     
     return(
         <nav className={styled.divNav}>
@@ -51,7 +51,7 @@ const Header = (props) => {
             }
             </PopUp>
         </nav>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
