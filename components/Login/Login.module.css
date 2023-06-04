@@ -1,0 +1,35 @@
+.formContainer, .loginForm, .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm button, .registerForm button {
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+    color: #d8d5d5;
+    background-color: #3d85c6;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.loginForm button:hover, .registerForm button:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+}
+
+.linkBtn {
+    background: none;
+    border: none;
+    color: #d8d5d5;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.linkBtn:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+}

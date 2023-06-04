@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@300;400&display=swap');
+
+body {
+  background: #C3C3C3;
+  font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #2F363B;
+  text-decoration: none;
+}
+/* CSS da home*/
+.main {
+  padding: 0 20px;
+  padding-top: 10px;
+  margin: 10px 100px;
+  font-size: 20px;
+}
+
+.categoryLabel, .GameSlider {
+  padding-left: 40px;
+  margin-bottom: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #05131d;
+    color: #B7B0A7;
+    font-family: "Sofia Sans Semi Condensed";
+  }
+  
+  a {
+    color: #B7B0A7;
+    text-decoration: none;
+  }
+}
+
+/*CSS da game page*/
+.gamePage{
+  height: 100%;
+  width: 81%;
+}
+.leftContainer {
+  float: left;
+  align-items: starts;
+
+  height: 100%;
+  width: 30vh;
+  margin-left: 17vh;
+}
+
+.addBtn{
+  background-color: #3d85c6;
+  color: #d8d5d5;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 5px;
+
+  width: 200px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.addBtn:hover {
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+}
+
+.gameTitle{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 64px;
+}
+
+.divRating{
+  display: block;
+  align-items: center;
+  float: left;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  height: 21.5vh;
+  width: 15vh;
+  margin-left: 17vh;
+  margin: 10px;
+  padding-bottom: 0;
+}
+
+.metaScore, .userScore{
+  margin-right: 10px;
+}
+.metaBtn{
+  font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+  color: inherit;
+
+  outline: none;
+  background: none;
+
+  border: 3px solid;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 30px;
+}
+.greenBtn {
+  color: rgb(102, 204, 51);
+  border-color: rgb(102, 204, 51);
+}
+.yellowBtn {
+  color: rgb(255, 204, 51);
+  border-color: rgb(255, 204, 51);
+}
+.redBtn {
+  color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+}
+
+.metaScore, .userScore{
+  margin: 2px;
+}
+.userScore a, .metaScore p{
+  padding-left: 2px;
+  margin-top: 0;
+}
+.metaScore p{
+  margin-top: 4px;
+}
+.userValue, .userValue a{
+  color:rgb(255, 204, 51);
+  padding: 10px;
+  font-size: 30px;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+.userValue a{
+  padding-left: 2px;
+}
+.userValue svg{
+  position: relative;
+
+  top: 2px;
+  height: 30px;
+  width: 30px;
+}
+
+.divInfo{
+  float: left;
+  flex-direction: row;
+
+  margin: 10px;
+  height: 21.5vh;
+  width: 29vh;
+  margin-left: 0;
+}
+
+.divInfo div{
+  margin-bottom: 10px;
+}
+
+.rightContainer{
+  float: left;
+  flex-direction: row;
+
+  margin: 10px;
+  height: 21.5vh;
+  width: 40%;
+}

@@ -1,9 +1,0 @@
-Requerements - venv
-
-1 - Entrar na pasta do projeto e abrir o terminal (Necessário ter o python instalado)
-2 - Criar o ambiente virtual utilizando:
-python -m venv nome_do_ambiente_virtual
-3 - Ativar o ambiente virtual usando: 
-nome_do_ambiente_virtual\Scripts\Activate
-4 - Instalar o django no venv
-pip install Django
