@@ -120,7 +120,7 @@ const ProfileSettings= () => {
             PASSWORD:
             <br/>
             <input
-              type="text"
+              type="password"
               className={styles.passwordinputField}
             />
             <br/>

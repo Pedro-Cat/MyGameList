@@ -1,8 +1,13 @@
 .back{
     position: absolute;
-    top: 20px;
+    top: 100px;
     left: 15px;
     width: 50px;
+    transition: 0.3s;
+}
+
+.back:hover{
+    transform: scale(1.1);
 }
 
 .configuracao{
@@ -11,7 +16,7 @@
     width: 405px;
     height: 40px;
     left: 97px;
-    top: 3px;
+    top: 73px;
     font-weight: 400;
     font-size: 40px;
     line-height: 30px;
@@ -22,7 +27,7 @@
 .settingsUsername{
     position: absolute;
     left: 100px;
-    top: 155px;
+    top: 225px;
 }
 
 .usernameinputField {
@@ -32,7 +37,7 @@
 .settingsDescription{
     position: absolute;
     left: 100px;
-    top: 220px;
+    top: 290px;
 }
 
 .descriptioninputField{
@@ -43,45 +48,43 @@
 .settingsIcon{
     position: absolute;
     left: 100px;
-    top: 355px;
+    top: 415px;
 }
 
 .settingsProfileBackground{
     position: absolute;
     left: 100px;
-    top: 455px;
+    top: 505px;
 }
 
 .save{
-    position: absolute;
     left: 100px;
-    top: 555px;
-    background-color: #639bc0;
-    color: #FFFFFF;    
-}
+    top: 595px;
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+    color: #d8d5d5;
 
-.profile{
     display: flex;
     position: absolute;
-    left: 97px;
-    top: 65px;
-    overflow-x: hidden;
+    background-color: #3d85c6;
 
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 4px;
+    font-size: 15px;  
 }
 
-.security{
-    display: flex;
-    position: absolute;
-    left: 200px;
-    top:65px;
-    overflow-x: hidden;
-
+.save:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
 }
 
 .changetop5{
     display: flex;
     position: absolute;
-    top: 210px;
+    top: 290px;
     right: 100px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -91,66 +94,94 @@
 .title2{
     display: flex;
     position: absolute;
-    top: 130px;
+    top: 210px;
     right: 450px;
 }
 
 .change{
-    position: absolute;
     right: 100px;
-    top: 470px;
-    background-color: #639bc0;
-    color: #FFFFFF; 
+    top: 530px;
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+    color: #d8d5d5;
+
+    display: flex;
+    position: absolute;
+    background-color: #3d85c6;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.change:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
 }
 
 .change2{
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+    color: #d8d5d5;
+
     display: flex;
     position: absolute;
-    top: 245px;
+    top: 285px;
     left: 100px;
-    background-color: #639bc0;
-    color: #FFFFFF;
+    background-color: #3d85c6;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 15px;
+    
+}
+
+.change2:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
 }
 
 .change3{
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+    color: #d8d5d5;
+
     display: flex;
     position: absolute;
-    top: 375px;
+    background-color: #3d85c6;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 15px;
+
+    top: 395px;
     left: 100px;
-    background-color: #639bc0;
-    color: #FFFFFF;
+    
 }
 
-.profile{
-    display: flex;
-    position: absolute;
-    left: 97px;
-    top: 65px;
-    overflow-x: hidden;
-
-}
-
-.security{
-    display: flex;
-    position: absolute;
-    left: 200px;
-    top:65px;
-    overflow-x: hidden;
-
+.change3:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
 }
 
 .email{
     display: flex;
     position: absolute;
     left: 100px;
-    top: 175px;
+    top: 225px;
 }
 
 .password{
     display: flex;
     position: absolute;
     left: 100px;
-    top: 305px;
+    top: 335px;
 }
 
 .emailinputField{
@@ -169,8 +200,8 @@
     position: absolute;
     display: flex;
     justify-content: left;
-    top: 20px;
-    left: 19px;
+    top: 58px;
+    left: 23px;
     font-size: 140%;
 }
   
@@ -178,13 +209,20 @@
     margin: 0 10px;
     cursor: pointer;
     list-style: none;
+    background: none;
+    padding: 1px;
+    transition: 0.3s;
+}
+
+.navbar li:hover{
+    transform: scale(1.1);
 }
 
 .line{
     position: absolute;
     width: 99%;
     left: 5px;
-    top: 110px;
+    top: 190px;
     height: 1px;
     background-color: #FFFFFF;
     margin: 10px 0;

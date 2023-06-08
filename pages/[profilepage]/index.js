@@ -9,7 +9,7 @@ import Layout from "../../components/Layout";
 const ProfilePage= () =>  {
   const router = useRouter();
 
-  const profileId = router.query.ProfilePage;
+  const profileId = router.query.ProfileId;
   
   const defaultProfilePicture = 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png';
   const defaultBackgroundPicture = 'https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png';
