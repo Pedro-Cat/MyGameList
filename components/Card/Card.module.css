@@ -1,16 +1,31 @@
 .card {
-  background-color: white;
-  border-radius: 6px;
+  background-color: transparent;
+  
   width: 200px;
-  height: 259px;
+  height: 300px;
+  padding-right: 6px;
+
   overflow: hidden;
 }
 
 .card:hover{
-  box-shadow: 2px 2px 6px 2px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
+.card:hover img{
+  box-shadow: 2px 2px 6px 2px rgba(200, 200, 200, 0.2);
+}
+.card:hover a{
+  color:rgb(148, 110, 184);
+}
+
 .card img {
   width: 100%;
-  height: 100%;
+  height: 86.3%;
+  border-radius: 6px;
+
   object-fit: cover;
+}
+.card div {
+  position: relative;
+  bottom: 0;
 }

@@ -6,7 +6,10 @@ import Image from 'next/image'
 const GameCard = () => {
     return(
       <Card>
-        <Link href='/game/gameId'><Image src={placeholder}/></Link>
+        <Link href='/game/gameId'>
+          <Image src={placeholder}/>
+        </Link>
+        <div><a>Game Title</a></div>
       </Card>
     )
 }

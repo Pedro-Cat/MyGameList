@@ -1,12 +1,13 @@
 import Layout from '../components/Layout'
 import '../styles/globals.css'
-import '../components/Slider/customSlider.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <div>
+      <Layout>
       <Component {...pageProps} />
-    </Layout>
+      </Layout>
+    </div>
   )
 }
 

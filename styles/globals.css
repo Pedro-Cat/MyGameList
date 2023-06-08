@@ -18,13 +18,18 @@ a {
   margin: 10px 100px;
   font-size: 20px;
 }
-
-.categoryLabel, .GameSlider {
-  padding-left: 40px;
-  margin-bottom: 5px;
+.categoryLabel{
+  font-size: 25px;
 }
-.gameSlider div{
-  padding-bottom: 10px;
+.cardsDisplay{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the width as needed */
+  
+  grid-gap: 10px; /* Adjust the gap between items */
+  grid-row-gap: 20px;
+  padding-top: 5px;
+
+  height: inherit;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -151,7 +156,6 @@ a {
 
 .divInfo{
   float: left;
-  flex-direction: row;
 
   margin: 10px;
   height: 21.5vh;
@@ -165,9 +169,19 @@ a {
 
 .rightContainer{
   float: left;
-  flex-direction: row;
 
   margin: 10px;
   height: 21.5vh;
   width: 40%;
+}
+
+/* CSS da página de pesquisa*/
+.searchPage{
+  padding: 0 20px;
+  padding-top: 10px;
+  margin: 10px 100px;
+  font-size: 20px;
+}
+#options{
+  display: none;
 }
