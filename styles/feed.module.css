@@ -1,0 +1,31 @@
+.feed{
+    position: absolute;
+    font-size: 45px;
+    left: 90px;
+    top: 60px;
+}
+
+.line{
+    position: absolute;
+    width: 99%;
+    left: 5px;
+    top: 150px;
+    height: 1px;
+    background-color: #FFFFFF;
+    margin: 10px 0;
+}
+
+.feedContainer{
+    margin-top: 120px;
+}
+
+.back{
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    width: 50px;
+}
+
+.Container{
+    margin-top: 20px;
+}
