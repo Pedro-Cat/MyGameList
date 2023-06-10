@@ -185,3 +185,37 @@ a {
 #options{
   display: none;
 }
+.filters{
+  padding-bottom: 15px;
+}
+.filters select, .filters input{
+  background-color: transparent;
+  border: none;
+  color: inherit;
+
+  padding: 5px;
+  font-size: 16px;
+}
+.filters input{
+  color: #d8d5d5;
+  background-color: #245279;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 4px;
+}
+.filters select:hover, .filters input:hover{
+  cursor: pointer;
+}
+.filters input:hover{
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+}
+.filters select{
+  padding-right: 10px;
+  margin-right: 15px;
+}
+.filters select option{
+  color: black;
+}
