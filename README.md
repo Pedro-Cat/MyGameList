@@ -9,4 +9,4 @@ pip install --upgrade virtualenvwrapper-win
 mkvirtualenv nomeDoAmbiente
 
 ## Instalar pacotes utilizando o requirements.txt:
-pip install -r requirementes.txt
+pip install -r requirements.txt
