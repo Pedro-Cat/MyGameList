@@ -1,0 +1,31 @@
+{% extends 'feed.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated and user == post.user %}
+<h3>Update a post</h3>
+
+<hr>
+
+<form action="" enctype="multipart/form-data" method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Send</button>
+
+</form>
+{% else %}
+<h3>SAIA</h3>
+<h3>SAIA ENQUANTO PODE</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+{% endif%}
+
+{% endblock %}

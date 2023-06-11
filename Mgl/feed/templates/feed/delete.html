@@ -1,0 +1,33 @@
+{% extends 'feed.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated and user == post.user %}
+<h3>Delete {{ post }}</h3>
+
+<br/>
+<div class="form-group">
+    <form action="" method="POST">
+    
+        {% csrf_token %}
+    
+        <strong>ARE YOU SURE??!</strong>
+    
+        <button class="btn btn-secundary">DELETE</button>
+    
+    </form>
+</div>
+
+{% else %}
+<h3>SAIA</h3>
+<h3>SAIA ENQUANTO PODE</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+<h3>SAIA</h3>
+{% endif%}
+
+{% endblock %}
