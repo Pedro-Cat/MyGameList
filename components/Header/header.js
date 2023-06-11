@@ -53,7 +53,7 @@ const Header = (props) => {
                     </div>
                     <div>
                         <button className={`${styled.linkBtn} ${styled.singBtn}`} onClick={() => [setButtonPopup(true), setCurrentForm('register')]}>
-                            SingUp
+                            SignUp
                         </button>
                     </div>
                 </div>
