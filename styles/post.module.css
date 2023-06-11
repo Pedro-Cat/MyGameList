@@ -25,7 +25,7 @@
     object-fit: cover;
   }
   
-  .postTitle {
+  .postContent {
     position: absolute;
     font-size: 18px;
     margin-top: 5px;
@@ -48,5 +48,48 @@
     color: #888;
   }
 
+  .Comment{
+    position: absolute;
+    border-radius: 50px;
+    width: 900px;
+    bottom: 15px;
+    left: 168px;
+    height: 25px;
+    background-color: transparent;
+    color: white;
+  }
   
-  
+  .LikeBtn{
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: white;
+  }
+
+  .LikeBtn:hover{
+    transform: scale(1.2);
+  }
+
+  .LikeCounter{
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    font-size: 25px;
+  }
+
+  .LikeBtn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .Heart {
+    font-size: 30px;
+  }
+
+  .Liked {
+    color: red;
+  }
