@@ -1,11 +1,12 @@
 # MyGameList
 
-### Instalar virtualenv e auxiliadores (Caso não tenha):
+## Instalar virtualenv e auxiliadores (Caso não tenha):
 pip install --upgrade virtualenv
+
 pip install --upgrade virtualenvwrapper-win
 
-### Criar um ambiente virtual:
+## Criar um ambiente virtual:
 mkvirtualenv nomeDoAmbiente
 
-### Instalar pacotes utilizando o requirements.txt:
+## Instalar pacotes utilizando o requirements.txt:
 pip install -r requirementes.txt
