@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="search.css">
+<div class="searchPage">
+    <h1 class="searchInput">"searchId"</h1>
+    <form class="filters" onsubmit="handleSubmit(event)">
+      <!--Isso aqui é pra ser um dropdown menu, n sei se funciona no html normal. O bootstrap tem um dropdown tbm mas n consegui usar no react-->
+      <select name="platforms" id="platform-id" onchange="handlePlatformChange(event)">
+        <option value="" disabled>Select Platform</option>
+        <option value="PC">PC</option>
+        <option value="PlayStation">PlayStation</option>
+        <option value="Nintendo">Nintendo</option>
+        <option value="Xbox">Xbox</option>
+      </select>
+      
+      <select name="genres" id="genre-id" onchange="handleGenreChange(event)">
+        <option value="" disabled>Select Genre</option>
+        <option value="Action">Action</option>
+        <option value="FPS">FPS</option>
+        <option value="RPG">RPG</option>
+      </select>
+  
+      <input type="submit" name="submit" value="Apply filters" />
+    </form>
+    <div class="cardsDisplay">
+        <!--Cada bloco desse exibe um card-->
+        <div class="card">
+            <a href="/game/gameId">
+                <img src="placeholder" alt="Game Image" />
+              </a>
+              <div>
+                <a href="/game/gameId">Game Title</a>
+              </div>              
+        </div>
+    </div>
+  </div>
+  
+  <script>
+    const searchInput = 'searchId';
+    let platform = '';
+    let genre = '';
+  
+    function handleSubmit(event) {
+      event.preventDefault();
+  
+      if (platform !== '' && genre !== '') {
+        console.log(platform, genre);
+      } else if (platform !== '') {
+        console.log(platform);
+      } else if (genre !== '') {
+        console.log(genre);
+      }
+    }
+    
+    //Essa parte aqui ta armazenando o valor dos filtros
+    function handlePlatformChange(event) {
+      platform = event.target.value;
+    }
+  
+    function handleGenreChange(event) {
+      genre = event.target.value;
+    }
+  </script>
+  

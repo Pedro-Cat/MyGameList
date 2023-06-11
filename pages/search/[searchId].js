@@ -9,7 +9,7 @@ function SearchPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    //Isso aqui armazena as variáveis, n acho q vão precisar disso mas ta ai
     if (platform !== '' && genre !== '') {
         console.log(platform, genre);
     } else if (platform !== '') {
