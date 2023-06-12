@@ -127,3 +127,6 @@
     width: 40%;
   }
   
+  .cardsDisplay .card p {
+    display: none; 
+  }

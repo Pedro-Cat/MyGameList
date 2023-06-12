@@ -58,7 +58,7 @@ function HomePage(){
         <div className='main'>
             {/* Cada linha é uma categoria e deve conter 6 cards */}
             <a className='categoryLabel' href={redirecionar}>{category}</a>
-            <div> 
+            <div className='cardsDisplay'> 
             <Slider {...settings}>
                 {gamelist}    
             </Slider>

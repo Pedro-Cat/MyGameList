@@ -18,19 +18,6 @@ a {
   margin: 10px 100px;
   font-size: 20px;
 }
-.categoryLabel{
-  font-size: 25px;
-}
-.cardsDisplay{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  
-  grid-gap: 10px;
-  grid-row-gap: 20px;
-  padding-top: 5px;
-
-  height: inherit;
-}
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -75,4 +62,18 @@ a {
 .card div {
   position: relative;
   bottom: 0;
+}
+
+.categoryLabel{
+  font-size: 25px;
+}
+.cardsDisplay{
+  margin-left: -31.5px;
+  margin-top: -15px;
+}
+.cardsDisplay a{
+  margin-left: -17px;
+}
+.cardsDisplay .card p {
+  display: block; 
 }

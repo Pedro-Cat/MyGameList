@@ -21,15 +21,23 @@ a {
 .categoryLabel{
   font-size: 25px;
 }
+
 .cardsDisplay{
+  /*
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the width as needed */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   
-  grid-gap: 10px; /* Adjust the gap between items */
+  grid-gap: 10px;
   grid-row-gap: 20px;
   padding-top: 5px;
 
   height: inherit;
+  */
+  margin-left: -31.5px;
+  margin-top: -15px;
+}
+.cardsDisplay a{
+  margin-left: -17px;
 }
 
 @media (prefers-color-scheme: dark) {

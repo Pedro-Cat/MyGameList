@@ -1,0 +1,16 @@
+.slick-prev:before, .slick-next:before {
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace; 
+    font-size: 50px; 
+    line-height: 0.5; 
+    color: #B7B0A7; 
+    opacity: 0.75; 
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-list {
+    padding-left: 0px;
+}
+
+.slick-disabled {
+    opacity: 0;
+    pointer-events:none;
+}
