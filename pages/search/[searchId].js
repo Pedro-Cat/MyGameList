@@ -49,7 +49,7 @@ function SearchPage() {
         <input type="submit" name="submit" value="Apply filters" />
       </form>
 
-      <div className="cardsDisplay">
+      <div className='cardsSearch'>
         {/* Renderiza os cards em base nos resultados da busca */}
         <GameCard />
         <GameCard />
