@@ -219,3 +219,7 @@ a {
 .filters select option{
   color: black;
 }
+
+.slick-slide div{
+  margin: 0 1rem;
+}
