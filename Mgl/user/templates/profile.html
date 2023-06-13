@@ -1,0 +1,43 @@
+{% extends 'home.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<img src="{{ profile.avatar.url }}">
+<h1>{{ profile.nick }}'s page</h1>
+{% if user.is_authenticated %}
+{% if user.profile == profile %}
+<a href="{% url 'profile-update' %}">
+    <h2>Update</h2>
+</a>
+<a href="{% url 'user-delete' profile.user.pk %}">
+    <h2>Delete</h2>
+</a>
+{% else %}
+<form method="POST">
+    {% csrf_token %}
+    {% if profile in user.profile.follow.all %}
+    <button class="btn btn-outline-danger" name="follow" value="unfollow" type="submit">
+        Unfollow {{ profile.nick }}
+    </button>
+    {% else %}
+    <button class="btn btn-outline-success" name="follow" value="follow" type="submit">
+        Follow {{ profile.nick }}
+    </button>
+    {% endif %}
+</form>
+<br>
+{% endif %}
+{% endif %}
+<strong>Following</strong>
+{% for profile in following %}
+<h3>{{ profile.nick }}</h3>
+{% endfor %}
+<strong>Followers</strong>
+{% for profile in followers %}
+<h3>{{ profile.nick }}</h3>
+{% endfor %}
+
+{% endblock %}

@@ -61,7 +61,7 @@
     
     <td>
         <br>
-    {% if user == post.user %}
+    {% if user.profile == post.user %}
     <td>
         <a href="{% url 'delete-post' post.id %}">(DELETE)</a>
     </td>
@@ -100,7 +100,7 @@
                 <td><img src="{{ post.archive.url }}"></td>
                 {% endif %}
                 {% endif %}
-                {% if user == post.user %}
+                {% if user.profile == post.user %}
                 <td>
                     <a href="{% url 'edit-post' post.id %}">(Edit)</a>
                 </td>
@@ -130,16 +130,14 @@
 
                 <td>
                     <br>
-                    {% if user == post.user %}
+                    {% if user.profile == post.user %}
                 <td>
                     <a href="{% url 'delete-post' post.id %}">(DELETE)</a>
                 </td>
-                {% endif %}
                 </td>
 
                 <td>
                     <br>
-                    {% if user == post.user %}
                 <td>
                     <a href="{% url 'file-post' post.id %}">(FILE)</a>
                 </td>

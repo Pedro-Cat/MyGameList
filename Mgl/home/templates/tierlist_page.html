@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<h1>Tierlist</h1>
+{% for object in object.games.all %}
+<h1>{{ object.name }}</h1>
+<img src="{{ object.image.url }}">
+<hr>
+{% empty %}
+<h1>Vazio</h1>
+{% endfor %}
+{% endblock %}

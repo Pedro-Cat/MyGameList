@@ -4,7 +4,7 @@
 
 {% block content %}
 
-{% if user.is_authenticated and user == post.user and not post.deleted and not post.filed %}
+{% if user.is_authenticated and user.profile == post.user and not post.deleted and not post.filed %}
 <h3>Update a post</h3>
 
 <hr>

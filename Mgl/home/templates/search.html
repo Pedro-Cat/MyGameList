@@ -1,0 +1,38 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<h1>Search Page</h1>
+<h3>You searched for "{{ search }}"</h3>
+<br>
+<h4>Results for Games</h4>
+{% if game_results %}
+{% for game in game_results %}
+<div class="card">
+    <a href="{% url 'game' game.id %}">
+        <img src="{{ game.image }}" alt="Game Image" />
+    </a>
+    <div>
+        <a href="{% url 'game' game.id %}">{{ game.name }}</a>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<h5>No Games Founded</h5>
+{% endif %}
+<br>
+<h4>Results for Profiles</h4>
+{% if profile_results %}
+{% for profile in profile_results %}
+<div class="card">
+    <a href="/game/gameId">
+        <img src="{{ profile.avatar.url }}" alt="Game Image" />
+    </a>
+    <div>
+        <a href="/game/gameId">{{ profile.nick }}</a>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<h5>No Profiles Founded</h5>
+{% endif %}
+{% endblock %}

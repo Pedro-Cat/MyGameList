@@ -1,0 +1,29 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<h1>{{ game.name }}</h1>
+<img src="{{ game.image }}">
+
+{% if form %}
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Send Review</button>
+</form>
+
+{% endif %}
+
+{% for review in reviews %}
+<br>
+{{ review }}
+<br>
+{{ review.review }}
+
+{% endfor %}
+<br>
+MÉDIAKKKKKKKKKKKKKKK - {{ game.user_score }}
+
+{% endblock %}

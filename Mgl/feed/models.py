@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from user.models import Profile
 import pathlib
 import uuid
 
@@ -14,10 +15,9 @@ def post_upload_handler(instance, filename):
 
 # Create a Post model
 class Post(models.Model):
-        # Mudar User para Profile
         user = models.ForeignKey(
-            User, related_name='post',
-            on_delete=models.DO_NOTHING
+            Profile, related_name='post',
+            on_delete=models.CASCADE
         )
         body = models.CharField(max_length=300)
         post_father = models.BigIntegerField(primary_key=False, blank=True, null=True)

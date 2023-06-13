@@ -27,7 +27,7 @@ def FeedView(request):
                 post_father = get_object_or_404(Post, id=request.POST.__getitem__('post_father'))
                 if form.is_valid() and not (post_father.deleted or post_father.filed):
                     post = form.save(commit=False)
-                    post.user = request.user
+                    post.user = request.user.profile
                     post.edited = False
                     post.deleted = False
                     post.filed = False
@@ -38,7 +38,7 @@ def FeedView(request):
             except:
                 if form.is_valid():
                     post = form.save(commit=False)
-                    post.user = request.user
+                    post.user = request.user.profile
                     post.edited = False
                     post.deleted = False
                     post.filed = False
@@ -55,7 +55,7 @@ def FeedView(request):
     
 def PostView(request, pk):
     post = get_object_or_404(Post, id=pk)
-    if post.deleted or (post.filed and not post.user == request.user):
+    if post.deleted or (post.filed and not post.user == request.user.profile):
         # Retorna para página de erro, 404
         return redirect('feed')
     
@@ -66,7 +66,7 @@ def PostView(request, pk):
                 post_father = get_object_or_404(Post, id=request.POST.__getitem__('post_father'))
                 if form.is_valid() and not (post_father.deleted or post_father.filed):
                     post = form.save(commit=False)
-                    post.user = request.user
+                    post.user = request.user.profile
                     post.edited = False
                     post.deleted = False
                     post.filed = False
@@ -77,7 +77,7 @@ def PostView(request, pk):
             except:
                 if form.is_valid():
                     post = form.save(commit=False)
-                    post.user = request.user
+                    post.user = request.user.profile
                     post.edited = False
                     post.deleted = False
                     post.filed = False
@@ -110,7 +110,7 @@ def PostLike(request, pk):
     else:
         messages.success(request, ('Your Must Been Loged In!'))
         # Retornar para página de login
-        return redirect('feed')
+        return redirect('login')
     
 def PostDelete(request, pk):
     post = get_object_or_404(Post, id=pk)
@@ -119,7 +119,7 @@ def PostDelete(request, pk):
         return redirect('feed')
     
     if request.user.is_authenticated:
-        if request.user == post.user:
+        if request.user.profile == post.user:
             post.deleted = True
             post.save()
 
@@ -133,7 +133,7 @@ def PostDelete(request, pk):
     else:
         messages.success(request, ('Your Must Been Loged In!'))
         # Retornar para página de login
-        return redirect('feed')
+        return redirect('login')
 
 def PostFile(request, pk):
     post = get_object_or_404(Post, id=pk)
@@ -142,7 +142,7 @@ def PostFile(request, pk):
         return redirect('feed')
     
     if request.user.is_authenticated:
-        if request.user == post.user:
+        if request.user.profile == post.user:
             post.filed = not post.filed
             post.save()
 
@@ -156,7 +156,7 @@ def PostFile(request, pk):
     else:
         messages.success(request, ('Your Must Been Loged In!'))
         # Retornar para página de login
-        return redirect('feed')
+        return redirect('login')
     
 class PostUpdate(UpdateView):
     model = Post
