@@ -109,8 +109,11 @@
 
     padding: 8px;
 }
-
-.postHead, .postFooter{
+.postHead{
+    display: flex;
+    justify-content: flex-start;
+}
+.postFooter{
     display: flex;
 }
 
@@ -133,29 +136,28 @@
 
 .userName{
     margin-left: 5px;
+    margin-right: 180px;
     height: min-content;
-    width: max-content
+    width: max-content;
 }
     .userName:hover{
         text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
     }
 
-.trashBtn{
-    display: inline;
-    margin-left: auto;
+.archiveBtn,
+.trashBtn,
+.editBtn {
+    display: flex;
+    margin: 1px;
 }
-    .trashBtn button{
+    .trashBtn button, .archiveBtn button, .editBtn button{
         color: #d8d5d5;
         background: none;
         border: none;
         cursor: pointer;
 
-        top: 16px;
-        right: 16px;
-        background: none;
-    }
-    .trashBtn svg{
-        margin-left: 390px;
+        height: min-content;
+        width: max-content;
     }
 
 .postBody{
