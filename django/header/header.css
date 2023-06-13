@@ -113,3 +113,45 @@
   .linkBtn:hover {
     text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
   }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 7px;
+  }
+
+  .dropdownTrigger {
+    cursor: pointer;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    background: #071c2b;
+    padding: 8px;
+    list-style: none;
+    border: 2px solid rgba(200, 200, 200, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .dropdownMenu li:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+
+  .dropdownMenuWithMargin {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 8px;
+  }
