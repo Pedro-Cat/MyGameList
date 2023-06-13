@@ -41,6 +41,18 @@ a {
 
   overflow: hidden;
 }
+.card p{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  
+  position: absolute;
+
+  margin-top: 30px;
+  margin-left: 5px;
+  padding-right: 5px;
+  font-size: 30px;
+  border-radius: 5px;
+}
 
 .card:hover{
   cursor: pointer;
