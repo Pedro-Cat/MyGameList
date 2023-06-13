@@ -23,7 +23,7 @@
     <form action="" enctype="multipart/form-data" method="POST">
         {% csrf_token %}        
         {{ form.as_p }}
-        
+
         <button type="submit" class="btn btn-primary">Send</button>
     </form>
 
@@ -55,7 +55,11 @@
                 {% endif %}
                 <td>
                     {{ post.get_likes }}
+                    {% if user in post.likes.all%}
+                    <a href="{% url 'like-post' post.id %}">Unlike</a>
+                    {% else %}
                     <a href="{% url 'like-post' post.id %}">Like</a>
+                    {% endif %}
                 </td>
                 <td>{{ post.created_at}}</td>
                 <td>

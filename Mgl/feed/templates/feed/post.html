@@ -38,7 +38,11 @@
     {% endif %}
     <td>
         {{ post.get_likes }}
+        {% if user in post.likes.all%}
+        <a href="{% url 'like-post' post.id %}">Unlike</a>
+        {% else %}
         <a href="{% url 'like-post' post.id %}">Like</a>
+        {% endif %}
     </td>
     <td>{{ post.created_at}}</td>
     <td>
@@ -57,18 +61,21 @@
     
     <td>
         <br>
-        {% if user == post.user %}
+    {% if user == post.user %}
     <td>
         <a href="{% url 'delete-post' post.id %}">(DELETE)</a>
     </td>
-    {% endif %}
     </td>
     
     <td>
         <br>
-        {% if user == post.user %}
+        
     <td>
+        {% if post.filed %}
+        <a href="{% url 'file-post' post.id %}">(UNFILE)</a>
+        {% else %}
         <a href="{% url 'file-post' post.id %}">(FILE)</a>
+        {% endif %}
     </td>
     {% endif %}
     </td>
@@ -100,7 +107,11 @@
                 {% endif %}
                 <td>
                     {{ post.get_likes }}
+                    {% if user in post.likes.all%}
+                    <a href="{% url 'like-post' post.id %}">Unlike</a>
+                    {% else %}
                     <a href="{% url 'like-post' post.id %}">Like</a>
+                    {% endif %}
                 </td>
                 <td>{{ post.created_at}}</td>
                 <td>
