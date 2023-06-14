@@ -24,14 +24,14 @@ def HomeView(request):
         
         return render(request, 'home.html', {'user_profile': user_profile,
                                             'lists': {
-                                            'Best Games By Metacritic': metacritc_best_games, 
-                                            'Most Popular Games': user_best_games, 
-                                            'Most Recent Games Released': new_games, 
-                                            "Best RPG's": best_rpg_games, 
-                                            "Best Open World Games": best_open_world_games, 
-                                            "Best Shooter's": best_shooter_games, 
-                                            "Best Fantasies": best_fantasy_games, 
-                                            "Best Simulators": best_simulators_games}
+                                            'Best Games By Metacritic': metacritc_best_games[:5], 
+                                            'Most Popular Games': user_best_games[:5], 
+                                            'Most Recent Games Released': new_games[:5], 
+                                            "Best RPG's": best_rpg_games[:5], 
+                                            "Best Open World Games": best_open_world_games[:5], 
+                                            "Best Shooter's": best_shooter_games[:5], 
+                                            "Best Fantasies": best_fantasy_games[:5], 
+                                            "Best Simulators": best_simulators_games[:5]}
                                             })
     else:
         metacritc_best_games = Game.objects.order_by('-metacritic_score')
@@ -44,14 +44,14 @@ def HomeView(request):
         best_simulators_games = Game.objects.filter(tags=54).order_by('-metacritic_score', '-user_score')
         
         return render(request, 'home.html', {'lists': {
-                                            'Best Games By Metacritic': metacritc_best_games, 
-                                            'Most Popular Games': user_best_games, 
-                                            'Most Recent Games Released': new_games, 
-                                            "Best RPG's": best_rpg_games, 
-                                            "Best Open World Games": best_open_world_games, 
-                                            "Best Shooter's": best_shooter_games, 
-                                            "Best Fantasies": best_fantasy_games, 
-                                            "Best Simulators": best_simulators_games}
+                                            'Best Games By Metacritic': metacritc_best_games[:5], 
+                                            'Most Popular Games': user_best_games[:5], 
+                                            'Most Recent Games Released': new_games[:5], 
+                                            "Best RPG's": best_rpg_games[:5], 
+                                            "Best Open World Games": best_open_world_games[:5], 
+                                            "Best Shooter's": best_shooter_games[:5], 
+                                            "Best Fantasies": best_fantasy_games[:5], 
+                                            "Best Simulators": best_simulators_games[:5]}
                                             })
     
 
@@ -66,6 +66,8 @@ def GameView(request, pk):
                 review.game = get_object_or_404(Game, id=pk)
                 review.save()
                 review.game.user_score = Review.objects.filter(game=review.game).aggregate(Avg('score'))['score__avg']
+                print(round(review.game.user_score, 1))
+                review.game.user_score = round(review.game.user_score, 1)
                 review.game.save()
                 messages.success(request, ('Your Review Has Been Posted!'))
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

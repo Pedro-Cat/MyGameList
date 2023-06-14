@@ -5,6 +5,7 @@
 <h3>You searched for "{{ search }}"</h3>
 <br>
 <h4>Results for Games</h4>
+<hr class="hr" style="border-color: white;">
 {% if game_results %}
 {% for game in game_results %}
 <div class="card">
@@ -21,17 +22,20 @@
 {% endif %}
 <br>
 <h4>Results for Profiles</h4>
+<hr style="border-color: white;">
 {% if profile_results %}
-{% for profile in profile_results %}
-<div class="card">
-    <a href="/game/gameId">
-        <img src="{{ profile.avatar.url }}" alt="Game Image" />
-    </a>
-    <div>
-        <a href="/game/gameId">{{ profile.nick }}</a>
+<div class="cardsDisplay">
+    {% for profile in profile_results %}
+    <div class="card">
+        <a href="{% url 'profile' profile.id %}">
+            <img src="{{ profile.avatar.url }}" alt="Game Image" />
+        </a>
+        <div>
+            <a href="/game/gameId">{{ profile.nick }}</a>
+        </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 {% else %}
 <h5>No Profiles Founded</h5>
 {% endif %}

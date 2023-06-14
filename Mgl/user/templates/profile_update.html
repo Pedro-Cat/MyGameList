@@ -5,7 +5,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class=formContainer>
+<div style="flex: 1;"></div>
+<div class=formContainer style="flex: 3;">
     <form class=loginForm action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
@@ -16,4 +17,6 @@
 
     <button class=linkBtn>Não possui uma conta? Registre-se</button>
 </div>
+<div style="flex: 1;"></div>
+
 {% endblock %}

@@ -1,0 +1,58 @@
+.gameCard {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 90%;
+    height: 30%;
+    flex-direction: row;
+}
+
+.gameIcon {
+    width: 30vb;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    border: 3px solid #FFFFFF;
+}
+
+.gamenameDiv {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1vb;
+}
+
+.divRating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text {
+    margin: 2vb;
+}
+
+.reviewCard {
+    margin: 3vb;
+}
+
+.userReviewDiv {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2%;
+}
+
+.reviewProfileIcon {
+    width: 10vb;
+    height: 10vb;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    border: 3px solid #FFFFFF;
+    border-radius: 511px;
+}

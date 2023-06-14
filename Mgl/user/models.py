@@ -29,6 +29,12 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.user.username}  - {self.nick}"
 
+    def get_following(self):
+        return self.follow.exclude(id=self.id).count()
+    
+    def get_followers(self):
+        return self.followed_by.exclude(id=self.id).count()
+
     def create_profile(sender, instance, created, **kwargs):
         if created:
             user_profile = Profile(user=instance, nick=instance.username, avatar='avatar_images/default_userimage.jpg')
@@ -46,4 +52,3 @@ class Settings(models.Model):
 
     def __str__(self):
         return f"{self.profile.user.username} settings"
-    

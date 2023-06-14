@@ -51,6 +51,12 @@ a {
 }
 
 /*CSS da game page*/
+
+.gameInfo {
+    display: flex;
+    flex-direction: row;
+}
+
 .gamePage {
     height: 100%;
     width: 81%;
@@ -193,6 +199,10 @@ a {
     margin: 10px;
     height: 21.5vh;
     width: 40%;
+}
+
+.cardsDisplay .card p {
+    display: none;
 }
 
 /* CSS da página de pesquisa*/
