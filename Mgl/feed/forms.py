@@ -10,8 +10,11 @@ class PostForms(ModelForm):
         label='',
         widget=forms.widgets.Textarea(
             attrs={
-                'placeholder': 'What are you thinking?',
-                'class': 'form-control',
+                'placeholder': "what's up!?",
+                'name': 'text',
+                'maxLength': '320',
+                'rows': '2',
+                'cols': '10',
                 'required': 'True',
             }                         
             )

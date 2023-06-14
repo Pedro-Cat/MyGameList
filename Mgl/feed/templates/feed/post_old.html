@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<body>
+    <h1>Post</h1>
+    <hr>
+    {% block content %}
+    <h3>Post</h3>
+    
+    <td>{{ post.user }}</td>
+    {% if post.edited %}
+    <td>{{ post.body }} - Edited</td>
+    {% if post.archive %}
+    <td><img src="{{ post.archive.url }}"></td>
+    {% endif %}
+    {% else %}
+    <td>{{ post.body }}</td>
+    {% if post.archive %}
+    <td><img src="{{ post.archive.url }}"></td>
+    {% endif %}
+    {% endif %}
+    {% if user == post.user %}
+    <td>
+        <a href="{% url 'edit-post' post.id %}">(Edit)</a>
+    </td>
+    {% endif %}
+    <td>
+        {{ post.get_likes }}
+        {% if user in post.likes.all%}
+        <a href="{% url 'like-post' post.id %}">Unlike</a>
+        {% else %}
+        <a href="{% url 'like-post' post.id %}">Like</a>
+        {% endif %}
+    </td>
+    <td>{{ post.created_at}}</td>
+    <td>
+        <br>
+        {% if form %}
+    
+        <form action="" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="post_father" value="{{ post.id }}">
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    
+        {% endif %}
+    </td>
+    
+    <td>
+        <br>
+    {% if user.profile == post.user %}
+    <td>
+        <a href="{% url 'delete-post' post.id %}">(DELETE)</a>
+    </td>
+    </td>
+    
+    <td>
+        <br>
+        
+    <td>
+        {% if post.filed %}
+        <a href="{% url 'file-post' post.id %}">(UNFILE)</a>
+        {% else %}
+        <a href="{% url 'file-post' post.id %}">(FILE)</a>
+        {% endif %}
+    </td>
+    {% endif %}
+    </td>
+
+
+    <table class="table">
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>
+                    <a href="{% url 'post' post.id %}">(View)</a>
+                </td>
+                <td>{{ post.user }}</td>
+                {% if post.edited %}
+                <td>{{ post.body }} - Edited</td>
+                {% if post.archive %}
+                <td><img src="{{ post.archive.url }}"></td>
+                {% endif %}
+                {% else %}
+                <td>{{ post.body }}</td>
+                {% if post.archive %}
+                <td><img src="{{ post.archive.url }}"></td>
+                {% endif %}
+                {% endif %}
+                {% if user.profile == post.user %}
+                <td>
+                    <a href="{% url 'edit-post' post.id %}">(Edit)</a>
+                </td>
+                {% endif %}
+                <td>
+                    {{ post.get_likes }}
+                    {% if user in post.likes.all%}
+                    <a href="{% url 'like-post' post.id %}">Unlike</a>
+                    {% else %}
+                    <a href="{% url 'like-post' post.id %}">Like</a>
+                    {% endif %}
+                </td>
+                <td>{{ post.created_at}}</td>
+                <td>
+                    <br>
+                    {% if form %}
+
+                    <form action="" enctype="multipart/form-data" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="hidden" name="post_father" value="{{ post.id }}">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+
+                    {% endif %}
+                </td>
+
+                <td>
+                    <br>
+                    {% if user.profile == post.user %}
+                <td>
+                    <a href="{% url 'delete-post' post.id %}">(DELETE)</a>
+                </td>
+                </td>
+
+                <td>
+                    <br>
+                <td>
+                    <a href="{% url 'file-post' post.id %}">(FILE)</a>
+                </td>
+                {% endif %}
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
