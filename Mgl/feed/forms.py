@@ -20,7 +20,15 @@ class PostForms(ModelForm):
             )
         )
 
-    archive = forms.FileField(required=False, label='')
+    archive = forms.FileField(
+        required=False,
+        label='',
+        widget=forms.widgets.ClearableFileInput(
+            attrs={
+                'class': 'btn btn-outline-primary dropdown-toggle',
+            }
+        )
+        )
 
     class Meta:
         model = Post
