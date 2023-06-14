@@ -1,0 +1,109 @@
+.profileCard{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 90%;
+    height: 30%;
+    flex-direction: row;
+}
+
+.hr {
+    border-color: white;
+}
+
+.postsDiv {
+    display: flex;
+}
+
+.posts {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.profileicon{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    border: 3px solid #FFFFFF;
+    border-radius: 511px;
+}
+
+.usernameDiv {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8%;
+}
+
+.followsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.settings{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top:50%;
+    background-color:transparent;
+    border-radius:10px; 
+    padding:15px;
+    right: 510px;
+    top: 85px;
+    background-color: #D9D9D9;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.settings:hover{
+    opacity: 2;
+}
+
+.username{
+    position: relative;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44px;
+    text-align: left;
+    color: white;
+}
+
+
+
+.profilebackground{
+    position: relative;
+    
+}
+
+.back{
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #082d48;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top5games{
+    display: flex;
+    position: absolute;
+    top: 610px;
+    left: 350px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    flex-direction: row;
+}
+
+.title2{
+    display: flex;
+    position: absolute;
+    top: 525px;
+    left: 350px;
+}

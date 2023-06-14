@@ -1,0 +1,205 @@
+.containerFeed {
+    display: flex;
+}
+
+.columnLe,
+.columnRi,
+.columnMid {
+    flex: 1;
+}
+
+.collumnMid {
+    flex: 2;
+}
+
+.postPage {
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.divBorder {
+    border: solid 0.25px rgba(200, 200, 200, 0.2);
+
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.postInput {
+    display: flex;
+}
+
+.postInput textarea {
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 117px;
+    resize: none;
+
+
+    background-color: rgb(24, 47, 76);
+    color: #d8d5d5;
+    border: none;
+    outline: none;
+
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+
+    font-size: 15px;
+    border-radius: 10px;
+
+    margin-left: 25px;
+    margin-right: 25px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.postBtn {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 4.5%;
+}
+
+.postBtn input {
+    font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
+    background-color: #3d85c6;
+    color: #d8d5d5;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.postBtn input:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+}
+
+.postPfp {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.postPfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.postPfp:hover img {
+    box-shadow: 2px 2px 6px 2px rgba(200, 200, 200, 0.2);
+    cursor: pointer;
+}
+
+.postContainer {
+    border: solid 0.25px rgba(200, 200, 200, 0.2);
+
+    padding: 8px;
+}
+
+.postHead,
+.postFooter {
+    display: flex;
+}
+
+.postPfp {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.postPfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.postPfp:hover img {
+    box-shadow: 2px 2px 6px 2px rgba(200, 200, 200, 0.2);
+    cursor: pointer;
+}
+
+.userName {
+    margin-left: 5px;
+    height: min-content;
+    width: max-content
+}
+
+.userName:hover {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+}
+
+.trashBtn {
+    display: inline;
+    display: flex;
+    margin-left: auto;
+}
+
+.trashBtn button {
+    color: #d8d5d5;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    top: 16px;
+    right: 16px;
+    background: none;
+}
+
+.trashBtn svg {
+    margin-left: 0px;
+}
+
+.postBody {
+    margin-left: 60px;
+    margin-right: 20px;
+    margin-top: -30px;
+}
+
+.postBody:hover {
+    cursor: text;
+}
+
+.postFooter {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.postFooter button {
+    color: inherit;
+
+    background: none;
+    border: none;
+}
+
+.postFooter button:hover {
+    cursor: pointer;
+}
+
+.likePost,
+.commentPost,
+.sharePost {
+    display: flex;
+}
+
+.likePost label,
+.commentPost label,
+.sharePost label {
+    margin-left: 5px;
+}

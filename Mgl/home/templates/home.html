@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/global.css' %}">
         <link rel="stylesheet" href="{% static 'css/header.css' %}">
+        <link rel="stylesheet" href="{% static 'css/gamecard.css' %}">
+        {% block css %}
+        {% endblock %}
     </head>
     <body>
         <nav>
@@ -45,9 +48,9 @@
                         <i class="fa-solid fa-user"></i>
                         Profile
                     </a>
-                    <a class="dropdown-item" href="#">
-                        <i class="fa-solid fa-gear"></i>
-                        Settings
+                    <a class="dropdown-item" href="{% url 'feed' %}">
+                        <i class="fa-solid fa-comments"></i>
+                        Feed
                     </a>
                     <a class="dropdown-item" href="{% url 'logout' %}">
                         <i class="fa-solid fa-right-from-bracket"></i>
@@ -79,18 +82,16 @@
         {% for list, games in lists.items %}
         <div class="main">
             <!--Cada bloco desse é uma categoria, cada categoria deve conter 6 cards, aqui ta usando como exemplo a categoria popular-->
-            <a class="categoryLabel" href="/search/Popular">{{ list }}</a>
+            <a class="categoryLabel">{{ list }}</a>
             <div class="cardsDisplay">
               {% for game in games %}
               <!--Cada bloco desse exibe um card-->
-                <div class="card">
-                    <a href="{% url 'game' game.id %}">
-                        <img src="{{ game.image }}" alt="Game Image" />
-                    </a>
-                    <div>
-                        <a href="{% url 'game' game.id %}">{{ game.name }}</a>
-                    </div>              
-                </div>
+              <div class="card">
+                <a href="{% url 'game' game.id %}">
+                  <img src="{{ game.image }}"/>
+                </a> 
+                <div><a>{{ game.name }}</a></div>
+            </div>
               {% endfor %}
             </div>
         </div>    

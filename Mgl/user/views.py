@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.contrib.auth import login
 from .models import Profile
 from .forms import UserForm, ProfileForm
+from feed.models import Post
 
 # Create your views here.
 
@@ -70,17 +71,18 @@ def ProfileView(request, pk):
 
     if request.method == 'POST':
         user_profile = request.user.profile
-        action = request.POST['follow']
+        action = request.POST.get('follow')
         if action == 'follow':
             user_profile.follow.add(profile)
         elif action == 'unfollow':
             user_profile.follow.remove(profile)
         user_profile.save()
     # Action Follow
-    following = profile.follow.exclude(id=pk)
-    followers = profile.followed_by.exclude(id=pk)
+    posts = Post.objects.filter(user=profile, deleted=False, filed=False).order_by('-created_at')
+    # following = profile.follow.exclude(id=pk)
+    # followers = profile.followed_by.exclude(id=pk)
 
-    return render(request, 'profile_page.html', {'profile':profile, 'following':following, 'followers':followers})
+    return render(request, 'profile_page.html', {'profile':profile, 'posts':posts})
 
 # Views:
 # ProfileView

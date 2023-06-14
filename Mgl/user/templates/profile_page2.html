@@ -1,0 +1,39 @@
+{% extends 'home.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/profilepage.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="profileContainer">
+    <div class="fundo"></div>
+    <img class="profilebackground" src={backgroundPicture} alt="Foto de fundo do perfil" />
+    <img class="profileicon" src="{{ profile.avatar.url }}" alt="Foto de perfil" />
+    <h1 class="username">{{ profile.nick }}</h1>
+    <p class="userdescription">{description}</p>
+
+
+    {% if user.profile == profile %}
+    <a href="{% url 'profile-update' %}" class="btn btn-outline-success">
+        <i class="fa-solid fa-user-pen"></i>
+        Edit Profile
+    </a>
+    <a href="{% url 'user-delete' profile.user.pk %}" class="btn btn-outline-danger">
+        <i class="fa-solid fa-user-xmark"></i>
+        Delete Profile
+    </a>
+    {% endif %}
+    <!-- <Fragment>
+        <h1 class="styles.title2}>TOP 5 GAMES</h1>
+        <div class="styles.top5games}>
+            {cardData.map((card) => (
+            <Card key={card.id} title={card.title} />
+            ))}
+        </div>
+    </Fragment> -->
+</div>
+
+{% endblock %}
