@@ -53,8 +53,18 @@ a {
 /*CSS da game page*/
 
 .gameInfo {
+<<<<<<< HEAD
   display: flex;
   flex-direction: row;
+=======
+    display: flex;
+    flex-direction: row;
+}
+
+.gamePage {
+    height: 100%;
+    width: 81%;
+>>>>>>> main
 }
 
 .gamePage{
@@ -189,6 +199,43 @@ a {
 .cardsDisplay .card p {
   display: none; 
 }
+<<<<<<< HEAD
+=======
+
+.userValue svg {
+    position: relative;
+
+    top: 2px;
+    height: 30px;
+    width: 30px;
+}
+
+.divInfo {
+    float: left;
+
+    margin: 10px;
+    height: 21.5vh;
+    width: 29vh;
+    margin-left: 0;
+}
+
+.divInfo div {
+    margin-bottom: 10px;
+}
+
+.rightContainer {
+    float: left;
+
+    margin: 10px;
+    height: 21.5vh;
+    width: 40%;
+}
+
+.cardsDisplay .card p {
+    display: none;
+}
+
+>>>>>>> main
 /* CSS da página de pesquisa*/
 .searchPage {
     padding: 0 20px;

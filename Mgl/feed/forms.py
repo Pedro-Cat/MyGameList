@@ -10,14 +10,25 @@ class PostForms(ModelForm):
         label='',
         widget=forms.widgets.Textarea(
             attrs={
-                'placeholder': 'What are you thinking?',
-                'class': 'form-control',
+                'placeholder': "what's up!?",
+                'name': 'text',
+                'maxLength': '320',
+                'rows': '2',
+                'cols': '10',
                 'required': 'True',
             }                         
             )
         )
 
-    archive = forms.FileField(required=False, label='')
+    archive = forms.FileField(
+        required=False,
+        label='',
+        widget=forms.widgets.ClearableFileInput(
+            attrs={
+                'class': 'btn btn-outline-primary dropdown-toggle',
+            }
+        )
+        )
 
     class Meta:
         model = Post

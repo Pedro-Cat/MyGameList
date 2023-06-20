@@ -23,28 +23,15 @@ def FeedView(request):
     if request.user.is_authenticated:
         form = PostForms(request.POST or None, request.FILES)
         if request.method == 'POST':
-            try:
-                post_father = get_object_or_404(Post, id=request.POST.__getitem__('post_father'))
-                if form.is_valid() and not (post_father.deleted or post_father.filed):
-                    post = form.save(commit=False)
-                    post.user = request.user.profile
-                    post.edited = False
-                    post.deleted = False
-                    post.filed = False
-                    post.post_father = post_father.id
-                    post.save()
-                    messages.success(request, ('Your Post Has Been Posted!'))
-                    return redirect('feed')
-            except:
-                if form.is_valid():
-                    post = form.save(commit=False)
-                    post.user = request.user.profile
-                    post.edited = False
-                    post.deleted = False
-                    post.filed = False
-                    post.save()
-                    messages.success(request, ('Your Post Has Been Posted!'))
-                    return redirect('feed')
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.user = request.user.profile
+                post.edited = False
+                post.deleted = False
+                post.filed = False
+                post.save()
+                messages.success(request, ('Your Post Has Been Posted!'))
+                return redirect('feed')
     
         posts = Post.objects.filter(post_father=None, deleted=False, filed=False).order_by('-created_at')
         return render(request, 'feed.html', {'posts': posts, 'form': form})
@@ -62,28 +49,17 @@ def PostView(request, pk):
     if request.user.is_authenticated:
         form = PostForms(request.POST or None, request.FILES)
         if request.method == 'POST':
-            try:
-                post_father = get_object_or_404(Post, id=request.POST.__getitem__('post_father'))
-                if form.is_valid() and not (post_father.deleted or post_father.filed):
-                    post = form.save(commit=False)
-                    post.user = request.user.profile
-                    post.edited = False
-                    post.deleted = False
-                    post.filed = False
-                    post.post_father = post_father.id
-                    post.save()
-                    messages.success(request, ('Your Post Has Been Posted!'))
-                    return HttpResponseRedirect(request.path_info)
-            except:
-                if form.is_valid():
-                    post = form.save(commit=False)
-                    post.user = request.user.profile
-                    post.edited = False
-                    post.deleted = False
-                    post.filed = False
-                    post.save()
-                    messages.success(request, ('Your Post Has Been Posted!'))
-                    return HttpResponseRedirect(request.path_info)
+            post_father = get_object_or_404(Post, id=pk)
+            if form.is_valid() and not (post_father.deleted or post_father.filed):
+                post = form.save(commit=False)
+                post.user = request.user.profile
+                post.edited = False
+                post.deleted = False
+                post.filed = False
+                post.post_father = post_father.id
+                post.save()
+                messages.success(request, ('Your Comment Has Been Posted!'))
+                return HttpResponseRedirect(request.path_info)
 
         posts = Post.objects.filter(post_father=pk, deleted=False, filed=False).annotate(q_count=Count('likes')).order_by('-q_count', '-created_at')
         return render(request, 'feed/post.html', {'post': post, 'posts': posts, 'form': form})

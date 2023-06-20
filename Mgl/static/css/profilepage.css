@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .profileCard{
+=======
+.profileCard {
+>>>>>>> main
     display: flex;
     position: relative;
     margin: 0 auto;
@@ -22,7 +26,11 @@
     margin-right: 2%;
 }
 
+<<<<<<< HEAD
 .profileicon{
+=======
+.profileicon {
+>>>>>>> main
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -44,6 +52,7 @@
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .settings{
     position: absolute;
     width: 30px;
@@ -52,6 +61,16 @@
     background-color:transparent;
     border-radius:10px; 
     padding:15px;
+=======
+.settings {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 15px;
+>>>>>>> main
     right: 510px;
     top: 85px;
     background-color: #D9D9D9;
@@ -59,11 +78,19 @@
     transition: 0.3s;
 }
 
+<<<<<<< HEAD
 .settings:hover{
     opacity: 2;
 }
 
 .username{
+=======
+.settings:hover {
+    opacity: 2;
+}
+
+.username {
+>>>>>>> main
     position: relative;
     font-weight: 400;
     font-size: 30px;
@@ -74,12 +101,21 @@
 
 
 
+<<<<<<< HEAD
 .profilebackground{
     position: relative;
     
 }
 
 .back{
+=======
+.profilebackground {
+    position: relative;
+
+}
+
+.back {
+>>>>>>> main
     position: relative;
     width: 90%;
     margin-left: auto;
@@ -91,7 +127,11 @@
     background-attachment: fixed;
 }
 
+<<<<<<< HEAD
 .top5games{
+=======
+.top5games {
+>>>>>>> main
     display: flex;
     position: absolute;
     top: 610px;
@@ -101,9 +141,17 @@
     flex-direction: row;
 }
 
+<<<<<<< HEAD
 .title2{
+=======
+.title2 {
+>>>>>>> main
     display: flex;
     position: absolute;
     top: 525px;
     left: 350px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

@@ -31,6 +31,10 @@ class Post(models.Model):
         # Get numbers of likes
         def get_likes(self):
             return self.likes.count()
+        
+        # Get numbers of comments
+        def get_comments(self):
+              return len(Post.objects.filter(post_father=self.id, deleted=False, filed=False))
 
         def __str__(self):
             return (

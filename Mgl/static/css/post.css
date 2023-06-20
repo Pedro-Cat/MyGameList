@@ -1,0 +1,94 @@
+.postContainer {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 160px;
+    width: 1200px;
+    left: 210px;
+
+}
+
+.authorIcon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.authorIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postContent {
+    position: absolute;
+    font-size: 18px;
+    margin-top: 5px;
+    left: 170px;
+    top: 85px;
+    text-align: justify;
+
+    overflow: hidden;
+    max-width: 900px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.postAuthor {
+    position: absolute;
+    left: 170px;
+    top: 5px;
+    font-size: 35px;
+    color: #888;
+}
+
+.Comment {
+    position: absolute;
+    border-radius: 50px;
+    width: 900px;
+    bottom: 15px;
+    left: 168px;
+    height: 25px;
+    background-color: transparent;
+    color: white;
+}
+
+.LikeBtn {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.LikeBtn:hover {
+    transform: scale(1.2);
+}
+
+.LikeCounter {
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    font-size: 25px;
+}
+
+.LikeBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.Heart {
+    font-size: 30px;
+}
+
+.Liked {
+    color: red;
+}
