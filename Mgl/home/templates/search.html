@@ -4,24 +4,25 @@
 <h1>Search Page</h1>
 <h3>You searched for "{{ search }}"</h3>
 <br>
-<h4>Results for Games</h4>
+<h3>Results for Games</h3>
 <hr class="hr" style="border-color: white;">
 {% if game_results %}
-{% for game in game_results %}
-<div class="card">
-    <a href="{% url 'game' game.id %}">
-        <img src="{{ game.image }}" alt="Game Image" />
-    </a>
-    <div>
-        <a href="{% url 'game' game.id %}">{{ game.name }}</a>
+    <div class="cardsDisplay">
+        {% for game in game_results %}
+        <!--Cada bloco desse exibe um card-->
+        <div class="card">
+            <a href="{% url 'game' game.id %}">
+                <img src="{{ game.image }}" />
+            </a>
+            <div><a>{{ game.name }}</a></div>
+        </div>
+        {% endfor %}
     </div>
-</div>
-{% endfor %}
 {% else %}
 <h5>No Games Founded</h5>
 {% endif %}
 <br>
-<h4>Results for Profiles</h4>
+<h3>Results for Profiles</h3>
 <hr style="border-color: white;">
 {% if profile_results %}
 <div class="cardsDisplay">
