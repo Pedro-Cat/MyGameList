@@ -8,8 +8,6 @@
 <link rel="stylesheet" href="{% static 'css/feed.css' %}">
 <link rel="stylesheet" href="{% static 'css/profilepage.css' %}">
 <link rel="stylesheet" href="{% static 'css/gamepage.css' %}">
-<<<<<<< HEAD
-=======
 {% endblock %}
 
 {% block content %}
@@ -115,111 +113,6 @@
             </div>
             {% endfor %}
         </div>
-        {% endif %}
-    </div>
-</div>
->>>>>>> main
-{% endblock %}
-
-{% block content %}
-<div class=profileContainer>
-    <div class=back>
-        <div class=gameCard>
-            <div style="display: flex; flex-direction: row;">
-                <img class=gameIcon src="{{ game.image }}" alt="Game Image" />
-                <div class=gamenameDiv>
-                    <h1 class=gamename style="text-align: left;">{{ game.name }}</h1>
-                    <div class="divRating" style="width: 35vb;">
-                        <div class="metaScore">
-                            <button class="metaBtn greenBtn" id="metaBtn">{{ game.metacritic_score }}</button>
-                            <p><b>Metascore</b></p>
-                        </div>
-                        <div class="userScore">
-                            <div class="userValue">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                            </svg>
-                            {% if game.user_score %}
-                                <a>{{ game.user_score }}</a>
-                            {% else %}
-                                <a>00.0</a>
-                            {% endif %}
-                            </div>
-                            <a><b>User score</b></a>
-                        </div>
-                    </div>  
-                    <div class="gameInfo">
-                        <div class="genres">
-                            <b>Genre(s):</b> 
-                            {% for tag in game.tags.all %}
-                                {{ tag }}
-                            {% endfor %}
-                          </div>
-                          <div class="publisher">
-                            <b>Publisher: {{ game.publisher }}</b>
-                          </div>
-                          <div class="launchDate">
-                            <b>Launch date:</b> {{ game.release_date }}
-                          </div>
-                          <div class="platforms">
-                            <b>Platform:</b> {{ game.plataform }}.
-                            {% if game.plataforms %}
-                              <b>Platforms:</b>
-                              {% for plataform in game.plataforms.all %}
-                                  {{ plataform }}
-                              {% endfor %}
-                            {% endif %}
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text">
-            <h1>Sumary</h1>
-        </div>
-        <hr class="hr">
-        <div class="text">
-            <h3>{{ game.sumary }}</h3>
-        </div>
-        <div class="text">
-            <h1>Reviews</h1>
-        </div>
-        <hr class="hr">
-        <form action="" method="POST">
-
-            {% csrf_token %}
-            {{ form.as_p }}
-
-            <button type="submit" class="btn btn-primary">Send Review</button>
-        </form>
-        {% if reviews %}
-            <div class="reviewsDiv">
-                {% for review in reviews %}
-                <hr class="hr">
-                <div class=reviewCard>
-                    <div style="display: flex; flex-direction: row;">
-                        <img class=reviewProfileIcon src="{{ review.profile.avatar.url }}" alt="Profile Avatar" />
-                        <div class=userReviewDiv>
-                            <h1 class=username>{{ review.profile.nick.capitalize}}'s review</h1>
-                            <div class=followsDiv style="width: 30vb;">
-                                <p style="width: 100vb;">
-                                    {{ review.review }}
-                                </p>
-                            </div>
-                            <div class="userScore">
-                                <div class="userValue">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                                    </svg>
-                                    <a>{{ review.score }}</a>
-                                </div>
-                                <a><b>User score</b></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
         {% endif %}
     </div>
 </div>

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 /*CSS do Feed*/
->>>>>>> main
 .containerFeed {
     display: flex;
 }
@@ -60,10 +57,7 @@
     align-items: center;
 }
 
-<<<<<<< HEAD
-=======
 .uploadBtn,
->>>>>>> main
 .postBtn {
     display: flex;
     justify-content: flex-end;
@@ -73,10 +67,7 @@
     margin-right: 4.5%;
 }
 
-<<<<<<< HEAD
-=======
 .uploadBtn input,
->>>>>>> main
 .postBtn input {
     font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
     background-color: #3d85c6;
@@ -123,10 +114,7 @@
 .postHead,
 .postFooter {
     display: flex;
-<<<<<<< HEAD
-=======
     justify-content: flex-start;
->>>>>>> main
 }
 
 .postPfp {
@@ -158,18 +146,11 @@
     text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
 }
 
-<<<<<<< HEAD
-.trashBtn {
-    display: inline;
-=======
 .editBtn {
->>>>>>> main
     display: flex;
     margin-left: auto;
 }
 
-<<<<<<< HEAD
-=======
 .archiveBtn,
 .trashBtn {
     display: flex;
@@ -178,21 +159,14 @@
 
 .archiveBtn button,
 .editBtn button,
->>>>>>> main
 .trashBtn button {
     color: #d8d5d5;
     background: none;
     border: none;
     cursor: pointer;
 
-<<<<<<< HEAD
-    top: 16px;
-    right: 16px;
-    background: none;
-=======
     height: min-content;
     width: max-content;
->>>>>>> main
 }
 
 .trashBtn svg {
@@ -238,8 +212,4 @@
 .commentPost label,
 .sharePost label {
     margin-left: 5px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main

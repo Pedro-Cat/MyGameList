@@ -53,10 +53,6 @@ a {
 /*CSS da game page*/
 
 .gameInfo {
-<<<<<<< HEAD
-  display: flex;
-  flex-direction: row;
-=======
     display: flex;
     flex-direction: row;
 }
@@ -64,7 +60,6 @@ a {
 .gamePage {
     height: 100%;
     width: 81%;
->>>>>>> main
 }
 
 .gamePage{
@@ -199,8 +194,6 @@ a {
 .cardsDisplay .card p {
   display: none; 
 }
-<<<<<<< HEAD
-=======
 
 .userValue svg {
     position: relative;
@@ -235,7 +228,6 @@ a {
     display: none;
 }
 
->>>>>>> main
 /* CSS da página de pesquisa*/
 .searchPage {
     padding: 0 20px;

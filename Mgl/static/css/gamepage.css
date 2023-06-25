@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-.gameCard{
-=======
 .gameCard {
->>>>>>> main
     display: flex;
     position: relative;
     margin: 0 auto;
@@ -50,11 +46,7 @@
     margin-left: 2%;
 }
 
-<<<<<<< HEAD
-.reviewProfileIcon{
-=======
 .reviewProfileIcon {
->>>>>>> main
     width: 10vb;
     height: 10vb;
     display: flex;
@@ -63,8 +55,4 @@
     position: relative;
     border: 3px solid #FFFFFF;
     border-radius: 511px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
