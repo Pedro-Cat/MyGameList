@@ -67,17 +67,20 @@
         {% block content %}
             {% for list, games in lists.items %}
             <!--Cada bloco desse é uma categoria, cada categoria deve conter 6 cards, aqui ta usando como exemplo a categoria popular-->
-            <a class="categoryLabel">{{ list }}</a>
-            <div class="cardsDisplay">
-                {% for game in games %}
-                <!--Cada bloco desse exibe um card-->
-                <div class="card">
-                    <a href="{% url 'game' game.id %}">
-                        <img src="{{ game.image }}" />
-                    </a>
-                    <div><a>{{ game.name }}</a></div>
+            <div class="listContent">
+                <a class="categoryLabel">{{ list }}</a>
+                <hr color="white">
+                <div class="cardsDisplay">
+                    {% for game in games %}
+                    <!--Cada bloco desse exibe um card-->
+                    <div class="card">
+                        <a href="{% url 'game' game.id %}">
+                            <img src="{{ game.image }}" />
+                        </a>
+                        <div><a>{{ game.name }}</a></div>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
             {% endfor %}
         {% endblock %}

@@ -25,7 +25,7 @@ def UserCreate(request):
             messages.success(request, ('You Profile has been created!'))
             return redirect('login')
         
-        return render(request, 'user_form.html', {'form':form})
+        return render(request, 'register.html', {'form':form})
 
 
 # def LoginView(request):

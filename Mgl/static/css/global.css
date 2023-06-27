@@ -5,6 +5,7 @@ body {
     font-family: "Sofia Sans Semi Condensed", 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    
 }
 
 a {
@@ -16,7 +17,7 @@ a {
 .content {
     padding: 0 20px;
     padding-top: 10px;
-    margin: 10px 100px;
+    margin: 2% 8%;
     font-size: 20px;
 }
 
@@ -40,7 +41,7 @@ a {
 @media (prefers-color-scheme: dark) {
     body {
         background: #05131d;
-        color: #B7B0A7;
+        color: white;
         font-family: "Sofia Sans Semi Condensed";
     }
 
@@ -185,6 +186,10 @@ a {
   margin: 10px;
   height: 21.5vh;
   width: 40%;
+}
+
+.listContent {
+  margin-bottom: 5%;
 }
 
 .cardsDisplay .card p {

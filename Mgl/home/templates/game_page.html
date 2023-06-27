@@ -74,6 +74,7 @@
 <div class="text">
     <h1>Reviews</h1>
 </div>
+{% if user.is_authenticated %}
 <hr class="hr">
 <form action="" method="POST">
 
@@ -82,6 +83,7 @@
 
     <button type="submit" class="btn btn-primary">Send Review</button>
 </form>
+{% endif %}
 {% if reviews %}
 <div class="reviewsDiv">
     {% for review in reviews %}
