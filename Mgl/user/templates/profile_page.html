@@ -14,7 +14,7 @@
     <div class=back>
         <div class=profileCard>
             <div style="display: flex; flex-direction: row;">
-                <img class=profileicon src="{{ profile.avatar.url }}" alt="Foto de perfil" />
+                <img class="profileIcon img-fluid" src="{{ profile.avatar.url }}" alt="Foto de perfil" />
                 <div class=usernameDiv>
                     <h1 class=username>{{ profile.nick.capitalize}}'s profile</h1>
                     <div class=followsDiv style="width: 30vb;">
@@ -31,6 +31,10 @@
                 {% if request.user == profile.user %}
                 <a href="{% url 'profile-update' %}">
                     <i class="fa-solid fa-user-pen"></i>
+                </a>
+                {% else %}
+                <a href="{% url 'follow' profile.pk %}">
+                    Follow
                 </a>
                 {% endif %}
             </div>

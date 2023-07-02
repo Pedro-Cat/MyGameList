@@ -18,6 +18,7 @@ def profile_upload_handler(instance, filename):
     return f'avatar_images/{new_fname}{fpath.suffix}'
 
 
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nick = models.TextField(max_length=20)

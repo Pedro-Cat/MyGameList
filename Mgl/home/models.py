@@ -38,7 +38,7 @@ class Game(models.Model):
     sumary = models.TextField(max_length=3000)
     developers = models.CharField(max_length=100)
     publisher = models.CharField(max_length=100) 
-    plataform = models.ForeignKey(Plataform, related_name='plataform', on_delete=models.CASCADE, blank=True, null=True)
+    plataform = models.ForeignKey(Plataform, related_name="plataform", on_delete=models.CASCADE, blank=True, null=True)
     plataforms = models.ManyToManyField(Plataform, related_name='plataforms', blank=True)
     tags = models.ManyToManyField(Tag, related_name='tags', blank=True)
     release_date = models.DateField()
@@ -62,6 +62,16 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.profile.nick}'s review to {self.game.name} - {self.score}"
+    
+class Tierlist(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    games = models.ManyToManyField(Game)
+    name = models.CharField(max_length=40)
+
+    def __str__(self):
+        return f'{self.profile.nick} - {self.name}'
+
+
 
 
     

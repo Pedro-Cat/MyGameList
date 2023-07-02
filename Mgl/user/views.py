@@ -28,23 +28,6 @@ def UserCreate(request):
         return render(request, 'register.html', {'form':form})
 
 
-# def LoginView(request):
-#     if request.user.is_authenticated:
-#         messages.success(request, ('You already loged in!'))
-#         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-        
-#     else:
-#         if request.method == 'POST':
-#             #form = LoginForm(request.POST or None)
-#             form = AuthenticationForm(request, data=request.POST)
-#             if form.is_valid():
-#                 login(request, user=form.get_user())
-#                 messages.success(request, ('You Profile has been created!'))
-#                 return redirect('home')
-        
-#         return render(request, 'user_form.html', {'form':form})
-
-
 class UserDelete(DeleteView):
     model = User
     template_name = 'user_delete_form.html'
@@ -60,7 +43,7 @@ def ProfileUpdate(request):
             messages.success(request, ('You Profile has been updated!'))
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
         
-        return render(request, 'profile_update.html', {'form':form})
+        return render(request, 'update.html', {'form':form})
     else:
         messages.success(request, ('You must be Logged In to view this page!'))
         return redirect('login')
@@ -68,21 +51,29 @@ def ProfileUpdate(request):
 # ProfilePage
 def ProfileView(request, pk):
     profile = get_object_or_404(Profile, id=pk)
-
-    if request.method == 'POST':
-        user_profile = request.user.profile
-        action = request.POST.get('follow')
-        if action == 'follow':
-            user_profile.follow.add(profile)
-        elif action == 'unfollow':
-            user_profile.follow.remove(profile)
-        user_profile.save()
-    # Action Follow
     posts = Post.objects.filter(user=profile, deleted=False, filed=False).order_by('-created_at')
-    # following = profile.follow.exclude(id=pk)
-    # followers = profile.followed_by.exclude(id=pk)
 
     return render(request, 'profile_page.html', {'profile':profile, 'posts':posts})
+
+def ProfileFollow(request, pk):
+    # Follow and unfollow
+    
+    profile = get_object_or_404(Profile, id=pk)
+    if request.user.is_authenticated and (request.user.profile != profile):
+        user_profile = request.user.profile
+        if user_profile.follow.filter(id=profile.user.id):
+            user_profile.follow.remove(profile)
+        else:
+            user_profile.follow.add(profile)
+
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        
+    
+   
+
+
 
 # Views:
 # ProfileView

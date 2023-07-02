@@ -22,13 +22,16 @@
     margin-right: 2%;
 }
 
-.profileicon {
+.profileIcon {
+    max-width: 160px;
+    max-height: 140px;
+    min-width: 128px;
+    min-height: 128px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
-    border: 3px solid #FFFFFF;
-    border-radius: 511px;
+    border: 1px solid #FFFFFF;
 }
 
 .usernameDiv {

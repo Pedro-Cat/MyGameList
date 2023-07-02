@@ -12,4 +12,5 @@ urlpatterns = [
     path('profile/update/', ProfileUpdate, name='profile-update'),
     # Modificar Delete #
     path('delete/<int:pk>', UserDelete.as_view(), name='user-delete'),
+    path('profile/<int:pk>/follow', ProfileFollow, name='follow'),
 ]
